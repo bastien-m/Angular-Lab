@@ -1,0 +1,20 @@
+{
+    "menuList": [
+        {
+            "name": "Administration",
+            "prefix": "admin",
+            "submenu": [
+                {"name": "Gestion Utilisateurs", "link": "user"},
+                {"name": "Creer contenu", "link": "cms"}
+            ]
+        },
+        {
+            "name": "Accueil",
+            "prefix": "home",
+            "submenu": [
+                {"name": "Connexion", "link":"login"},
+                {"name": "Créer compte", "link":"signin"}
+            ]
+        }
+    ]
+}
