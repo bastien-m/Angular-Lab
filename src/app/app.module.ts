@@ -1,31 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpModule } from '@angular/http';
-
-import { MenuBuilderModule } from './menu-builder/menu-builder.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LandingComponent } from './landing/landing.component';
+import { HomeComponent } from './home/home.component';
+import { FakePostService, FakeUserService } from './fake-user.service';
 
-import { FakeService } from './fake.service';
-
-const routes : Routes = [{
-  path: 'landing', component: LandingComponent
-}];
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    MenuBuilderModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [FakeService],
+  providers: [FakeUserService, FakePostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

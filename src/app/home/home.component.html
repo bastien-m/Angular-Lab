@@ -1,0 +1,11 @@
+<div *ngIf="user | async">
+  <h1>Firstname: {{(user | async)?.firstname}}</h1>
+  Lastname: {{(user | async)?.lastname}}
+</div>
+
+<div *ngFor="let post of posts | async">
+  <p class="postContent">{{post.body}}</p>
+  <p class="postContent">{{post.body}}</p>
+</div>
+
+<button (click)="load()" type="button">Load more</button>
