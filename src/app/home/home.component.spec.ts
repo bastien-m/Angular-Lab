@@ -32,7 +32,6 @@ describe('HomeComponent', () => {
   let spyGetPostByUser: any;
 
   beforeEach(() => {
-    console.log('Premier before each');
     const FakeUserServiceStub = {
       getUser: function(id: number) {
         return Observable.of(firstUser);
@@ -47,7 +46,6 @@ describe('HomeComponent', () => {
   });
 
   beforeEach(() => {
-    console.log('Second before each');
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     el = fixture.nativeElement;
