@@ -1,4 +1,6 @@
-import { FakePostService, FakeUserService, PostModel, UserModel } from '../fake-user.service';
+import { FakePostService, FakeUserService } from '../fake-user.service';
+import { PostModel } from 'app/shared/models/post.model';
+import { UserModel } from 'app/shared/models/user.model';
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';

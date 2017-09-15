@@ -6,18 +6,8 @@ import 'rxjs/add/observable/from';
 import 'rxjs/add/operator/find';
 import 'rxjs/add/observable/of';
 
-export interface UserModel {
-    id: number;
-    firstname: string;
-    lastname: string;
-}
-
-export interface PostModel {
-    id: number;
-    userId: number;
-    body: string;
-    title?: string;
-}
+import { PostModel } from 'app/shared/models/post.model';
+import { UserModel } from 'app/shared/models/user.model';
 
 
 @Injectable()
@@ -44,8 +34,8 @@ export class FakeUserService {
 export class FakePostService {
 
     private posts: Array<PostModel> = [
-        { id: 0, userId: 1, body: 'Content of first post' },
-        { id: 1, userId: 1, body: 'Second post'}
+        { id: 0, userId: 1, body: 'Content of first post', title: 'first post' },
+        { id: 1, userId: 1, body: 'Second post', title: 'second post'}
     ];
 
     getPostByUser(id: number): Observable<PostModel[]> {

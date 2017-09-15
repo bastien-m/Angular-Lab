@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FakePostService, FakeUserService } from './fake-user.service';
 import { TestInputComponent } from './test-input/test-input.component';
-
+import { PostService } from './services/post.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -29,7 +29,7 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [FakeUserService, FakePostService],
+  providers: [FakeUserService, FakePostService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

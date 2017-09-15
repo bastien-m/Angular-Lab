@@ -1,10 +1,12 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { By } from '@angular/platform-browser';
-import { PostModel, UserModel, FakeUserService, FakePostService } from '../fake-user.service';
 import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-
+import { By } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+
+import { FakeUserService, FakePostService } from '../fake-user.service';
+import { UserModel } from 'app/shared/models/user.model';
+import { PostModel } from 'app/shared/models/post.model';
 import { HomeComponent } from './home.component';
 
 const firstUser: UserModel = {id: 0, firstname: 'first', lastname: 'last'};
@@ -69,7 +71,7 @@ describe('HomeComponent', () => {
     })
   }));
 
-  fit('should return the first post with fakeAsync', fakeAsync(() => {
+  it('should return the first post with fakeAsync', fakeAsync(() => {
     tick();
     fixture.detectChanges();
     const posts = el.querySelectorAll('.postContent');
@@ -77,7 +79,7 @@ describe('HomeComponent', () => {
     expect(contents[0]).toBe(postReturn[0].body);
   }));
 
-  fit('should return the first post', (async() => {
+  it('should return the first post', (async() => {
     fixture.whenStable().then(() => {
       const postsContent = el.querySelector('.postContent').textContent;
       expect(postsContent).toBe(postReturn[0].body);
