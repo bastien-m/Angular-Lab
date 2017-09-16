@@ -9,9 +9,10 @@ import { BoutonGeneriqueDirective } from './bouton-generique.directive';
     TextMaskModule
   ],
   declarations: [
-  BoutonGeneriqueDirective],
+    BoutonGeneriqueDirective
+  ],
   exports: [
-    TextMaskModule
+    TextMaskModule, BoutonGeneriqueDirective
   ]
 })
 export class SharedModule { }
