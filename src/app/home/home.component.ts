@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'ngl-home',
   templateUrl: './home.component.html',
   styles: []
 })
