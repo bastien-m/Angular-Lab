@@ -26,6 +26,7 @@
     "angular2-text-mask": "^8.0.3",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "ramda": "^0.24.1",
     "rxjs": "^5.1.0",
