@@ -27,12 +27,12 @@ export class BoutonGeneriqueDirective implements OnInit{
     // ajout de l icone au bouton
     this.renderer.addClass(iconElement, `fa`)
     this.renderer.addClass(iconElement, `fa-${this.icon}`);
-    this.renderer.appendChild(this.nativeElement, iconElement);
+    this.renderer.setStyle(iconElement, 'padding-right', '5px');
+    this.renderer.insertBefore(this.nativeElement, iconElement, this.nativeElement.childNodes[0]);
     
     // ajout de la classe au bouton
     this.nativeElement.classList.add('btn');
     this.nativeElement.classList.add('btn-primary');
   }
 
-  // TODO: mettre l'icone avant le texte
 }
