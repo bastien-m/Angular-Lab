@@ -18,7 +18,7 @@ Cookbook sur des fonctionnalités "complexes/avancées" du Framework Angular4* e
 ### Fonctionnalités présentées
 - Tests unitaires de composant
 - Tests unitaire de service (avec mock http)
-
+- Directive (utilisation de Renderer2 pour la création d'élément)
 
 ## TODO
 - Composants avancés
